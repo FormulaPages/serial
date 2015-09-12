@@ -4,14 +4,14 @@ Dates as sequential serial numbers so they can be used in calculations. By defau
 January 1, 1900 is serial number 1, and January 1, 2008 is serial number 39448 because 
 it is 39,448 days after January 1, 1900.
 
-#+BEGIN_SRC js :tangle serial.es6
+#+BEGIN_SRC js :tangle SERIAL.es6
   export default function(date) {
-      return Math.ceil((date - d1900) / MilliSecondsInDay) + (date > -2203891200000)?2:1;
+      return Math.ceil((date - d1900) / 86400000) + (date > -2203891200000)?2:1;
   }
 #+END_SRC
 
 #+BEGIN_SRC sh :exports none
-  babel serial.es6 -m umd --out-file index.js
+  babel SERIAL.es6 -m umd --out-file index.js
 #+END_SRC
 
 #+RESULTS:

@@ -8,7 +8,7 @@
             exports: {}
         };
         factory(mod.exports, mod);
-        global.serial = mod.exports;
+        global.SERIAL = mod.exports;
     }
 })(this, function (exports, module) {
     "use strict";
