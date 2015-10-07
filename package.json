@@ -1,10 +1,11 @@
 {
   "name": "formula-serial",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
-  "main": "index.js",
+  "main": "SERIAL.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha test",
+    "build": "babel SERIAL.es6 -m umd --out-file SERIAL.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/FormulaPages/serial/issues"
   },
-  "homepage": "https://github.com/FormulaPages/serial#readme"
+  "homepage": "https://github.com/FormulaPages/serial#readme",
+  "dependencies": {
+    "formula-constants": "^1.0.3"
+  }
 }
