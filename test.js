@@ -1,6 +1,5 @@
 var serial = require('./SERIAL');
 var assert = require('assert');
-var error = require('formula-errors');
 
 describe('serial', function() {
   it('should convert a date to a number', function() {
